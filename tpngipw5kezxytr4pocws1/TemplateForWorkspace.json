@@ -327,11 +327,11 @@
 					},
 					"SynapseWorkspaceName": {
 						"type": "string",
-						"defaultValue": "tpngipw5kezxytr4pocws1.database.windows.net"
+						"defaultValue": "tpngipw5kezxytr4pocws1"
 					},
 					"SQLDedicatedPoolName": {
 						"type": "string",
-						"defaultValue": "tpngipw5kezxytr4pocws1"
+						"defaultValue": "tpngipw5kezxytr4pocws1p1"
 					},
 					"SQLLoginUsername": {
 						"type": "string",
@@ -1310,6 +1310,18 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('workspaceName'), '/tpngipw5kezxytr4pocws1p1')]",
+			"type": "Microsoft.Synapse/workspaces/sqlPools",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"collation": "SQL_Latin1_General_CP1_CI_AS",
+				"maxSizeBytes": 263882790666240,
+				"annotations": []
+			},
+			"dependsOn": [],
+			"location": "southafricanorth"
+		},
+		{
 			"name": "[concat(parameters('workspaceName'), '/ws1sparkpool1')]",
 			"type": "Microsoft.Synapse/workspaces/bigDataPools",
 			"apiVersion": "2019-06-01-preview",
@@ -1329,18 +1341,6 @@
 				"sparkVersion": "2.4",
 				"isComputeIsolationEnabled": false,
 				"sessionLevelPackagesEnabled": false,
-				"annotations": []
-			},
-			"dependsOn": [],
-			"location": "southafricanorth"
-		},
-		{
-			"name": "[concat(parameters('workspaceName'), '/tpngipw5kezxytr4pocws1p1')]",
-			"type": "Microsoft.Synapse/workspaces/sqlPools",
-			"apiVersion": "2019-06-01-preview",
-			"properties": {
-				"collation": "SQL_Latin1_General_CP1_CI_AS",
-				"maxSizeBytes": 263882790666240,
 				"annotations": []
 			},
 			"dependsOn": [],
