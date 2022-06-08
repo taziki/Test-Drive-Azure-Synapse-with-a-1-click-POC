@@ -283,11 +283,11 @@
 			},
 			"SynapseWorkspaceName": {
 				"type": "string",
-				"defaultValue": "tpngipw5kezxytr4pocws1.database.windows.net"
+				"defaultValue": "tpngipw5kezxytr4pocws1"
 			},
 			"SQLDedicatedPoolName": {
 				"type": "string",
-				"defaultValue": "tpngipw5kezxytr4pocws1"
+				"defaultValue": "tpngipw5kezxytr4pocws1p1"
 			},
 			"SQLLoginUsername": {
 				"type": "string",
